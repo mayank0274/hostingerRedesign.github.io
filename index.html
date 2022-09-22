@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <!-- slider css -->
+<link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <title>Responsive sidebar submenus</title>
+    </head>
+    <body>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+<div>
+       <img src="logo.png" width="30%">
+       <img src="indiaFlag.png" class="flag">
+ </div>          
+    
+                <div class="header__toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a href="#" class="nav__link nav__logo">
+                        <i class='bx bxs-disc nav__icon' ></i>
+                        <span class="nav__logo-name">Hostinger</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                          <!--
+                            <h3 class="nav__subtitle">Profile</h3>
+    -->
+                            <a href="#" class="nav__link active">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                            
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+<i class="fa-solid fa-server nav__icon"></i>
+                                    <span class="nav__name">Hosting</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item">Web hosting</a>
+                                        <a href="#" class="nav__dropdown-item">Cloud hosting</a>
+                                        <a href="#" class="nav__dropdown-item">WordPress hosting</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- VPS -->
+                                                        <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='text-icon'>VPS</i>
+                                    <span class="nav__name">VPS</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item">VPS hosting</a>
+                                        <a href="#" class="nav__dropdown-item">CyberPanel hosting</a>
+                                        <a href="#" class="nav__dropdown-item">Minecraft server hosting</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- email -->
+                            
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+<i class="fa-solid fa-envelope nav__icon"></i>
+                                    <span class="nav__name">Email</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item">Google workspace email hosting</a>
+                                        <a href="#" class="nav__dropdown-item">Hostinger email hosting</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+<!-- domain -->
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='text-icon'>🌐</i>
+                                    <span class="nav__name">Domain</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item">Domain Name Search</a>
+                                        <a href="#" class="nav__dropdown-item">WHOIS LookUp</a>
+                                        <a href="#" class="nav__dropdown-item">Domain Transfer</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+    
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Account</h3>
+    
+
+                            <a href="#" class="nav__link">
+
+ 
+ 
+<i class="fa-solid fa-right-to-bracket nav__icon"></i>
+                                <span class="nav__name">Sign in</span>
+                            </a>
+                            <a href="#" class="nav__link">
+<i class="fa-solid fa-user-plus nav__icon"></i>
+                                <span class="nav__name">Sign up</span></span>
+                            </a>
+                            
+                            <a href="#" class="nav__link">
+<i class="fa-solid fa-cart-shopping nav__icon"></i>
+                                <span class="nav__name">Buy a plan</span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link nav__logout">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+
+        <!--========== CONTENTS ==========-->
+        <main>
+          
+          <!-- hero section -->
+          
+            <section class="heroSec">
+              <div class="left">
+                <h1 class="heading">Looking for hosting for your website ?</h1>
+                <p>Everything You Need to Create a Website is here from domain to 24×7 assistance</p>
+                
+                <div class="buttons">
+                  <button class="btn btn-sec">Explore</button>
+                  <button class="btn">Buy a plan</button>
+                </div>
+              </div>
+              <div class="right">
+                <img src="main.png">
+              </div>
+            </section>
+            
+            
+            <!-- price section -->
+            <h1 class="heading secHeading">Our Hosting Plans</h1>
+            <section class="price">
+              <div class="card">
+                <div class="priceSec">
+                  <p> $121 </p>
+                </div>
+                
+               
+               <div class="planName">
+                 <div class="line"></div>
+<div class="text">Basic</div>
+<div class="line"></div>
+               </div>
+               
+                <div class="features">
+                  <div>
+                  <p>
+                  <i class="fa-solid fa-circle-check"></i>
+                    Free SSL
+                  </p>
+
+                  </div>
+                  <div>
+                  <p>
+                   <i class="fa-solid fa-circle-check"></i>
+                    Domain help
+                  </p>
+
+                  </div>
+                  <div>
+                  <p>
+<i class="fa-solid fa-circle-check"></i>
+                  24×7 assistance
+                  </p>
+
+                  </div>
+                  <div>
+                  <p>
+<i class="fa-solid fa-circle-check"></i>
+                    WordPress optimized
+                    </p>
+
+                  </div>
+                </div>
+                <div class="buyBtn">
+                  <button class="buy basic">Buy now</button>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="priceSec premium">
+                  <p> $121 </p>
+                </div>
+                
+               
+               <div class="planName">
+                 <div class="line"></div>
+<div class="text">Premium</div>
+<div class="line"></div>
+               </div>
+               
+                <div class="features">
+                  <div>
+                  <p>
+                  <i class="fa-solid fa-circle-check"></i>
+                    Free SSL
+                  </p>
+
+                  </div>
+                  <div>
+                  <p>
+                   <i class="fa-solid fa-circle-check"></i>
+                    Domain help
+                  </p>
+
+                  </div>
+                  <div>
+                  <p>
+<i class="fa-solid fa-circle-check"></i>
+                  24×7 assistance
+                  </p>
+
+                  </div>
+                  <div>
+                  <p>
+<i class="fa-solid fa-circle-check"></i>
+                    WordPress optimized
+                    </p>
+
+                  </div>
+                </div>
+                <div class="buyBtn">
+                  <button class="buy intermediate">Buy now</button>
+                </div>
+              </div>
+              
+              
+              <div class="card">
+                <div class="priceSec ultimate">
+                  <p> $121 </p>
+                </div>
+                
+               
+               <div class="planName">
+                 <div class="line"></div>
+<div class="text">Ultimate</div>
+<div class="line"></div>
+               </div>
+               
+                <div class="features">
+                  <div>
+                  <p>
+                  <i class="fa-solid fa-circle-check"></i>
+                    Free SSL
+                  </p>
+
+                  </div>
+                  <div>
+                  <p>
+                   <i class="fa-solid fa-circle-check"></i>
+                    Domain help
+                  </p>
+
+                  </div>
+                  <div>
+                  <p>
+<i class="fa-solid fa-circle-check"></i>
+                  24×7 assistance
+                  </p>
+
+                  </div>
+                  <div>
+                  <p>
+<i class="fa-solid fa-circle-check"></i>
+                    WordPress optimized
+                    </p>
+
+                  </div>
+                </div>
+                <div class="buyBtn">
+                  <button class="buy advanced">Buy now</button>
+                </div>
+              </div>
+              
+
+              
+    
+            </section>
+            
+            <!-- services -->
+            <h1 class="heading secHeading">Our Services</h1>
+            <section class="services">
+         
+              <div class="left">
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+                
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+                
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+                
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+                
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+                
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+                
+              </div>
+              
+              <div class="right">
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+                
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+                
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+                
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+                
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+                
+                <div>
+                  <img src="https://assets.hostinger.com/images/homepage2021/services/free-ssl-c672bc7cfb.svg" alt="services">
+                  <p>Free SSL</p>
+                </div>
+              </div>
+            </section>
+            
+            
+           <!-- testimonials -->
+            <h1 class="heading secHeading">Our Happy Clients</h1>
+<section class="testimonials">
+   <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+<i class="fa-solid fa-quote-left"></i>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate a fuga explicabo dolores, sunt aut suscipit, quasi debitis! Eius, nemo.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nemo tempora at doloremque fugiat animi quisquam id totam, et, provident natus autem, voluptatem eius odit.
+          </p>
+          <div class="bottomContent">
+            <p> - wpbeginer</p>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzoeP0_YaF6wJ-6mCVAPMvX0lYtluVQ7qYVFe7ivxncKz4clu_Ulqbfpw&s=10" alt="product_logo">
+          </div>
+        </div>
+        
+        
+        
+        <div class="swiper-slide">
+<i class="fa-solid fa-quote-left"></i>
+                    <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate a fuga explicabo dolores, sunt aut suscipit, quasi debitis! Eius, nemo.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nemo tempora at doloremque fugiat animi quisquam id totam, et, provident natus autem, voluptatem eius odit.
+          </p>
+          <div class="bottomContent">
+            <p> - wpbeginer</p>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzoeP0_YaF6wJ-6mCVAPMvX0lYtluVQ7qYVFe7ivxncKz4clu_Ulqbfpw&s=10" alt="product_logo">
+          </div>
+        </div>
+        <div class="swiper-slide">
+<i class="fa-solid fa-quote-left"></i>
+                    <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate a fuga explicabo dolores, sunt aut suscipit, quasi debitis! Eius, nemo.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nemo tempora at doloremque fugiat animi quisquam id totam, et, provident natus autem, voluptatem eius odit.
+          </p>
+          <div class="bottomContent">
+            <p> - wpbeginer</p>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzoeP0_YaF6wJ-6mCVAPMvX0lYtluVQ7qYVFe7ivxncKz4clu_Ulqbfpw&s=10" alt="product_logo">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+   <!-- footer -->
+
+<footer>
+<div class="row primary">
+  <div class="column about">
+
+  <h3>Hostinger</h3>
+
+   <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+      voluptatem corporis error non,
+  </p>
+
+  <div class="social">
+    <i class="fa-brands fa-facebook-square"></i>
+    <i class="fa-brands fa-instagram-square"></i>
+    <i class="fa-brands fa-twitter-square"></i>
+    <i class="fa-brands fa-youtube-square"></i>
+    <i class="fa-brands fa-whatsapp-square"></i>
+  </div>
+</div>
+
+<div class="column links">
+<h3>Some Links</h3>
+
+ <ul>
+
+  <li>
+   <a href="#">Link 1</a>
+  </li>
+  <li>
+   <a href="#">Refund/Return Policy</a>
+  </li>
+  <li>
+   <a href="#">Terms Of Service</a>
+  </li>
+  <li>
+   <a href="#">Support</a>
+  </li>
+ </ul>
+
+</div>
+
+
+<div class="column links">
+  <h3>Our Payment Partners</h3>
+   <ul>
+    <li>
+     <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+    </li>
+    <li>
+     <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+    </li>
+    <li>
+    <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+    </li>
+    <li>
+    <a href="#">More...</a>
+    </li>
+  </ul>
+</div>
+
+<div class="column">
+ 
+  <h3>Links</h3>
+   <ul>
+    <li>
+     <a href="#">Link 1</a>
+    </li>
+    <li>
+     <a href="#">Link 2</a>
+    </li>
+    <li>
+    <a href="#">Link 3</a>
+    </li>
+    <li>
+    <a href="#">Link 4</a>
+    </li>
+  </ul>
+</div>
+
+</div>
+
+<div class="row copyright">
+   <p>Copyright &copy; 2022 Hostinger<br> Template made with ♥️ by Luck sharma</p>
+</div>
+</footer>
+            
+        </main>
+        
+        
+        <!-- slider script -->
+        
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- font awesome icon -->  
+    <script src="https://kit.fontawesome.com/ad8ca5eb9b.js" crossorigin="anonymous"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="js/index.js"></script>
+    </body>
+</html>
